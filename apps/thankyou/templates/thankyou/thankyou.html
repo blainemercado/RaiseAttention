@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Thank You</title>
+	{% load staticfiles %}
+	<link rel="stylesheet" type="text/css" href="{% static 'thankyou/css/thankyouStyle.css' %}">
+</head>
+<body>
+	<div id="container">
+		<div id="header">
+			<h1>RaiseAttention</h1>
+			<h2>...raise money</h2>
+		</div>
+		<div id="body">
+			<div id="thankyou">
+				<p>THANK YOU! </p>
+				<p>Add how they helped, and why we want personal info</p>
+			</div>
+			<div id="supporterInfo">
+				<p>Totally optional, and completely anonymous. The more information you provide, the more money we can raise through ads.</p>
+				<div id="form">
+					<form action="/supporter" method="post">
+						{% csrf_token %}
+						<input type="radio" name="npo" value="Cancer Research Institute"><a href="http://www.cancerresearch.org/">Cancer Research Institute</a><br>
+						<input type="radio" name="npo" value="Soldiers' Angels"><a href="http://soldiersangels.org/">Soldiers' Angels</a><br>
+						<input type="radio" name="npo" value="The Trevor Project"><a href="http://www.thetrevorproject.org/">The Trevor Project</a><br>
+						<input type="radio" name="npo" value="Generosity.org"><a href="http://generosity.org/">Generosity.org</a><br>
+						<input type="radio" name="npo" value="UNICEF"><a href="https://www.unicef.org/">UNICEF</a><br>
+						<input type="submit" name="submit" value="Support a Cause">
+					</form>
+				</div>
+			</div>
+			<div id="sponsor">
+				
+			</div>
+		</div>
+		<div id="ads">
+			
+		</div>
+		<div id="footer">
+			
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+* {
+	vertical-align: baseline;
+	font-weight: inherit;
+	font-family: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	border: 0 none;
+	outline: 0;
+	padding: 0;
+	margin: 0;
+}
+
+p, a, input {
+	font-family: futura;
+	font-size: 20px;
+}
+
+	#container {
+		background-color: lightgrey;
+		width: 100%;
+		min-height: 500px;
+		min-width: 620px;
+	}
+		#header {
+			width: 100%;
+			height: 100px;
+			background-color: green;
+			text-align: center;
+		}
+			#header h1 {
+				color: white;
+				font-family: futura;
+				font-size: 40px;
+				margin-right: 150px;
+				padding-top: 2px;
+				margin-bottom: -15px;
+			}
+			#header h2 {
+				color: white;
+				font-family: futura;
+				font-size: 27px;
+				margin-right: 150px;
+			}
+		#body {
+			width: 75%;
+			min-width: 463px;
+			min-height: 600px;
+			background-color: white;
+			display: inline-block;
+			text-align: center;
+		}
+			#mission {
+				width: 100%;
+				min-height: 200px;
+				background-color: lightblue;
+			}
+			#selection {
+				width: 100%;
+				min-height: 300px;
+				background-color: white;
+			}
+				#form {
+					width: 250px;
+					margin-left: 35%;
+					text-align: left;
+				}
+			#sponsor {
+				width: 100%;
+				min-height: 200px;
+				background-color: lightblue;
+			}
+		#ads {
+			width: 150px;
+			min-height: 600px;
+			background-color: yellow;
+			display: inline-block;
+			vertical-align: top;
+		}
+		#footer {
+			width: 100%;
+			height: 100px;
+			background-color: green;
+		}
