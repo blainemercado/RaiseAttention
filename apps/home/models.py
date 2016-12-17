@@ -21,6 +21,20 @@ class NpoManager(models.Manager):
 		count = npoObject.votes
 		print('in models after addition', count)
 		return count
+	def voteCount(self):
+		npoArray = Npo.objects.all()
+		return npoArray
+
+class VisitorsManager(models.Manager):
+	def addTotalVisitors(self, name):
+		try:
+			visitorsObject = SiteVisitors.objects.get(name=name)
+		except:
+			visitorsObject = SiteVisitors.objects.create(name=name, visitorCount=1)
+			return visitorsObject.visitorCount
+		visitorsObject.visitorCount += 1
+		visitorsObject.save()
+		return visitorsObject.visitorCount
 
 # Create your models here.
 class Npo(models.Model):
@@ -30,3 +44,15 @@ class Npo(models.Model):
 	updated_at = models.DateTimeField(auto_now=True)
 	npoManager = NpoManager()
 	objects = models.Manager()
+
+class SiteVisitors(models.Model):
+	name = models.CharField(max_length=20)
+	visitorCount = models.PositiveIntegerField()
+	created_at = models.DateTimeField(auto_now_add=True)
+	updated_at = models.DateTimeField(auto_now=True)
+	visitorsManager = VisitorsManager()
+	objects = models.Manager()
+
+
+
+

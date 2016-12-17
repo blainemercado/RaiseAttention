@@ -4,6 +4,8 @@ from django.core.urlresolvers import reverse
 
 # Create your views here.
 def index(request):
+	totalVisitors = SiteVisitors.visitorsManager.addTotalVisitors('totalVisitors')
+	print(totalVisitors)
 	return render(request, 'home/index.html')
 
 def support(request):

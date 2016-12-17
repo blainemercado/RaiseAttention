@@ -20,14 +20,101 @@
 			<div id="supporterInfo">
 				<p>Totally optional, and completely anonymous. The more information you provide, the more money we can raise through ads.</p>
 				<div id="form">
-					<form action="/supporter" method="post">
+					<form action="supporter" method="post" id="supporterForm">
 						{% csrf_token %}
-						<input type="radio" name="npo" value="Cancer Research Institute"><a href="http://www.cancerresearch.org/">Cancer Research Institute</a><br>
-						<input type="radio" name="npo" value="Soldiers' Angels"><a href="http://soldiersangels.org/">Soldiers' Angels</a><br>
-						<input type="radio" name="npo" value="The Trevor Project"><a href="http://www.thetrevorproject.org/">The Trevor Project</a><br>
-						<input type="radio" name="npo" value="Generosity.org"><a href="http://generosity.org/">Generosity.org</a><br>
-						<input type="radio" name="npo" value="UNICEF"><a href="https://www.unicef.org/">UNICEF</a><br>
-						<input type="submit" name="submit" value="Support a Cause">
+						<input type="checkbox" name="returnSupporter" value="yes"> I have visited RaiseAttention two or more times<br>
+						<label>Age:</label><select name="ageRange" form="supporterForm">
+							<option value="blank"></option>
+							<option value="12under">12 and Under</option>
+							<option value="13-19">13-19</option>
+							<option value="20-29">20-29</option>
+							<option value="30-39">30-39</option>
+							<option value="40-49">40-49</option>
+							<option value="50-59">50-59</option>
+							<option value="60-69">60-69</option>
+							<option value="70+">70+</option>
+						</select><br>
+						<label>Gender:</label><select name="gender" form="supporterForm">
+							<option value="blank"></option>
+							<option value="female">Female</option>
+							<option value="male">Male</option>
+							<option value="other">Other</option>
+						</select><br>
+						<label>Relationship Status:</label><select name="relationship" form="supporterForm">
+							<option value="blank"></option>
+							<option value="single">Single</option>
+							<option value="inARelationship">In a Relationship</option>
+							<option value="engaged">Engaged</option>
+							<option value="married">Married</option>
+						</select><br>
+						<input type="text" name="city" placeholder="City"><br>
+						<label>State:</label><select name="state" form="supporterForm">
+							<option value="blank"></option>
+							<option value="AL">AL</option>
+							<option value="AK">AK</option>
+							<option value="AZ">AZ</option>
+							<option value="AR">AR</option>
+							<option value="CA">CA</option>
+							<option value="CO">CO</option>
+							<option value="CT">CT</option>
+							<option value="DE">DE</option>
+							<option value="FL">FL</option>
+							<option value="GA">GA</option>
+							<option value="GU">GU</option>
+							<option value="HI">HI</option>
+							<option value="ID">ID</option>
+							<option value="IL">IL</option>
+							<option value="IN">IN</option>
+							<option value="IA">IA</option>
+							<option value="KS">KS</option>
+							<option value="KY">KY</option>
+							<option value="LA">LA</option>
+							<option value="ME">ME</option>
+							<option value="MD">MD</option>
+							<option value="MA">MA</option>
+							<option value="MI">MI</option>
+							<option value="MN">MN</option>
+							<option value="MS">MS</option>
+							<option value="MO">MO</option>
+							<option value="MT">MT</option>
+							<option value="NE">NE</option>
+							<option value="NV">NV</option>
+							<option value="NH">NH</option>
+							<option value="NJ">NJ</option>
+							<option value="NM">NM</option>
+							<option value="NY">NY</option>
+							<option value="NC">NC</option>
+							<option value="ND">ND</option>
+							<option value="OH">OH</option>
+							<option value="OK">OK</option>
+							<option value="OR">OR</option>
+							<option value="PA">PA</option>
+							<option value="PR">PR</option>
+							<option value="RI">RI</option>
+							<option value="SC">SC</option>
+							<option value="SD">SD</option>
+							<option value="TN">TN</option>
+							<option value="TX">TX</option>
+							<option value="UT">UT</option>
+							<option value="VT">VT</option>
+							<option value="VA">VA</option>
+							<option value="VI">VI</option>
+							<option value="WA">WA</option>
+							<option value="WV">WV</option>
+							<option value="WI">WI</option>
+							<option value="WY">WY</option>
+						</select><br>
+						<label>Country:</label><select name="country" form="supporterForm">
+							<option value="blank"></option>
+							<option value="usa">USA</option>
+							<option value="canada">Canada</option>
+							<option value="mexico">Mexico</option>
+							<option value="england">England</option>
+							<option value="ireland">Ireland</option>
+							<option value="scotland">Scotland</option>
+							<option value="other">Other</option>
+						</select><br>
+						<input type="submit" name="submit" value="Submit Info Anonymously">
 					</form>
 				</div>
 			</div>
