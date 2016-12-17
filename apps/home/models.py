@@ -35,6 +35,9 @@ class VisitorsManager(models.Manager):
 		visitorsObject.visitorCount += 1
 		visitorsObject.save()
 		return visitorsObject.visitorCount
+	def getVisitors(self):
+		visitorsArray = SiteVisitors.objects.all()
+		return visitorsArray
 
 # Create your models here.
 class Npo(models.Model):

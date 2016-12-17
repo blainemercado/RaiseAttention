@@ -8,6 +8,7 @@
 </head>
 <body>
 Hello Admin
+<!-- Table for NPOs and their vote count -->
 	<table>
 		<thead>
 			<tr>
@@ -19,6 +20,46 @@ Hello Admin
 		<tr>
 			<td>{{npo.name}}</td>
 			<td>{{npo.votes}}</td>
+		</tr>
+		{% endfor %}
+	</table>
+	<!-- Table for Visitor Types and they visit count -->
+	<table>
+		<thead>
+			<tr>
+				<th>Visitor Type</th>
+				<th>Visits</th>
+			</tr>
+		</thead>
+		{% for visitor in visitors %}
+		<tr>
+			<td>{{visitor.name}}</td>
+			<td>{{visitor.visitorCount}}</td>
+		</tr>
+		{% endfor %}
+	</table>
+	<!-- Table for Supporters and their info -->
+	<table>
+		<thead>
+			<tr>
+				<th>Return Supporter</th>
+				<th>Age Range</th>
+				<th>Gender</th>
+				<th>Relationship Status</th>
+				<th>City</th>
+				<th>State</th>
+				<th>Country</th>
+			</tr>
+		</thead>
+		{% for supporter in supporters %}
+		<tr>
+			<td>{{supporter.returnSupporter}}</td>
+			<td>{{supporter.ageRange}}</td>
+			<td>{{supporter.gender}}</td>
+			<td>{{supporter.relationship}}</td>
+			<td>{{supporter.city}}</td>
+			<td>{{supporter.state}}</td>
+			<td>{{supporter.country}}</td>
 		</tr>
 		{% endfor %}
 	</table>
