@@ -1,7 +1,7 @@
 * {
 	vertical-align: baseline;
 	font-weight: inherit;
-	font-family: inherit;
+	font-family: Amaranth, sans-serif;
 	font-style: inherit;
 	font-size: 100%;
 	border: 0 none;
@@ -13,10 +13,29 @@
     box-sizing: border-box;
 }
 
-p, a, input {
-	font-family: futura;
+p, a, label {
 	font-size: 20px;
 	color: #27214e;
+	margin-bottom: 3px;
+}
+
+h1, h2 {
+	font-family: Kaushan Script, cursive;
+	margin-left: auto;
+	margin-right: auto;
+	color: #27214e;
+	font-size: 30px;
+}
+
+h3 {
+	font-size: 16x;
+	font-style: italic;
+	color: #27214e;
+	margin-top: 20px;
+	margin-bottom: 5px;
+}
+span {
+	font-family: Kaushan Script, cursive;
 }
 
 	#container {
@@ -31,20 +50,9 @@ p, a, input {
 			text-align: center;
 		}
 			#header h1 {
-				color: #27214e;
-				font-family: futura;
-				font-size: 40px;
-				margin-left: auto;
-				margin-right: auto;
-				padding-top: 10px;
-				margin-bottom: -15px;
-			}
-			#header h2 {
-				color: #27214e;
-				font-family: futura;
-				font-size: 27px;
-				margin-left: auto;
-				margin-right: auto;
+				font-size: 45px;
+				padding-top: 5px;
+				margin-bottom: -20px;
 			}
 		#body {
 			width: 100%;
@@ -53,24 +61,74 @@ p, a, input {
 			display: inline-block;
 			text-align: center;
 		}
-			#mission {
+			#selection {
 				width: 100%;
-				min-height: 200px;
+				min-height: 290px;
 				background-color: #569fb3;
 				padding: 20px;
 			}
-			#selection {
+				#form {
+					max-width: 260px;
+					margin-left: auto;
+					margin-right: auto;
+					text-align: left;
+				}
+					#form .npoInfo {
+						display: none;
+						width: 400px;
+						margin-left: -75px;
+						margin-right: auto;
+						background-color: #f7e089;
+						border-radius: 10px;
+						text-align: center;
+						padding: 10px;
+					}
+					input {
+						width: 20px;
+						height: 20px;
+						margin-bottom: 2px;
+						margin-right: 7px;
+						position: absolute;
+						visibility: hidden;
+						vertical-align: bottom;
+					}
+					#checked1, #checked2, #checked3, #checked4, #checked5{
+					    margin-bottom: 2px;
+						margin-right: 7px;
+					    display: inline-block;
+					    width: 20px;
+					    height: 20px;
+					    border-radius: 50%;
+					    background-color: #ffffff;
+					    box-shadow: inset 1px 0 #000000;
+					    vertical-align: bottom;
+					}
+					#btn1:checked + #checked1, 
+					#btn2:checked + #checked2, 
+					#btn3:checked + #checked3, 
+					#btn4:checked + #checked4, 
+					#btn5:checked + #checked5 {
+					    border: 5px solid #ffffff;
+					    background-color:#ff6b3e !important;
+					}
+					.submit {
+					font-size: 20px;
+					color: #27214e;
+					background-color: white;
+					width: 210px;
+					height: 38px;
+					padding: 5px;
+					border-radius: 5px;
+					margin-top: 5px;
+					visibility: visible;
+					position: relative;
+					}
+			#mission {
 				width: 100%;
 				min-height: 200px;
 				background-color: #86d7b7;
 				padding: 20px;
 			}
-				#form {
-					width: 250px;
-					margin-left: auto;
-					margin-right: auto;
-					text-align: left;
-				}
 			#sponsor {
 				width: 100%;
 				min-height: 200px;
@@ -90,4 +148,5 @@ p, a, input {
 			height: 100px;
 			background-color: #ff6b3e;
 			padding: 20px;
+			text-align: center;
 		}

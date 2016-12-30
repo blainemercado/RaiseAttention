@@ -1,7 +1,7 @@
 * {
 	vertical-align: baseline;
 	font-weight: inherit;
-	font-family: inherit;
+	font-family: Amaranth, sans-serif;
 	font-style: inherit;
 	font-size: 100%;
 	border: 0 none;
@@ -13,10 +13,19 @@
     box-sizing: border-box;
 }
 
-p, a, input {
-	font-family: futura;
+p, a, input, label {
 	font-size: 20px;
 	color: #27214e;
+}
+h1, h2 {
+	font-family: Kaushan Script, cursive;
+	margin-left: auto;
+	margin-right: auto;
+	color: #27214e;
+	font-size: 30px;
+}
+span {
+	font-family: Kaushan Script, cursive;
 }
 
 	#container {
@@ -31,20 +40,9 @@ p, a, input {
 			text-align: center;
 		}
 			#header h1 {
-				color: #27214e;
-				font-family: futura;
 				font-size: 40px;
-				margin-left: auto;
-				margin-right: auto;
-				padding-top: 10px;
-				margin-bottom: -15px;
-			}
-			#header h2 {
-				color: #27214e;
-				font-family: futura;
-				font-size: 27px;
-				margin-left: auto;
-				margin-right: auto;
+				padding-top: 5px;
+				margin-bottom: -20px;
 			}
 		#body {
 			width: 100%;
@@ -66,7 +64,7 @@ p, a, input {
 				padding: 20px;
 			}
 				#form {
-					width: 250px;
+					width: 320px;
 					margin-left: auto;
 					margin-right: auto;
 					text-align: left;
