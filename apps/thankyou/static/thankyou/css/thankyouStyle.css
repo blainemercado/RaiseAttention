@@ -13,12 +13,12 @@
     box-sizing: border-box;
 }
 
-p, a, input, label {
+p, a, input, label, option {
 	font-size: 20px;
 	color: #27214e;
+	text-decoration: none;
 }
 h1, h2 {
-	font-family: Kaushan Script, cursive;
 	margin-left: auto;
 	margin-right: auto;
 	color: #27214e;
@@ -40,9 +40,16 @@ span {
 			text-align: center;
 		}
 			#header h1 {
-				font-size: 40px;
-				padding-top: 5px;
 				margin-bottom: -20px;
+			}
+			#title {
+				font-family: Kaushan Script, cursive;
+				font-size: 45px;
+				padding-top: 5px;
+			}
+			#subtitle {
+				font-family: Kaushan Script, cursive;
+				font-size: 30px;
 			}
 		#body {
 			width: 100%;
@@ -57,18 +64,79 @@ span {
 				background-color: #569fb3;
 				padding: 20px;
 			}
+				#graph {
+					width: 350px;
+					min-height: 200px;
+					background-color: #f7e089;
+					margin-left: auto;
+					margin-right: auto;
+					margin-top: 15px;
+					padding: 10px;
+					text-align: left;
+					border-radius: 10px;
+				}
+					#graph h2 {
+						text-align: center;
+					}
+					.bar {
+						height: 30px;
+						background-color: #ff6b3e;
+						margin-bottom: 6px;
+					}
 			#supporterInfo {
 				width: 100%;
 				min-height: 200px;
 				background-color: #86d7b7;
 				padding: 20px;
 			}
+				#supporterInfo p {
+						margin-bottom: 15px;
+					}
 				#form {
-					width: 320px;
+					width: 330px;
 					margin-left: auto;
 					margin-right: auto;
-					text-align: left;
 				}
+					#btn {
+						margin-top: 7px;
+						margin-bottom: 7px;
+						position: absolute;
+						visibility: hidden;
+					}
+					#form select {
+						margin-top: 3px;
+						margin-bottom: 3px;
+						width: 225px;
+					}
+					#checked {
+					    margin-bottom: 4px;
+						margin-right: 6px;
+					    display: inline-block;
+					    width: 20px;
+					    height: 20px;
+					    border-radius: 50%;
+					    background-color: #ffffff;
+					    box-shadow: inset 1px 0 #000000;
+					    vertical-align: bottom;
+					}
+					#btn:checked + #checked {
+					    border: 5px solid #ffffff;
+					    background-color:#ff6b3e !important;
+					}
+					.submit {
+						font-size: 20px;
+						color: #27214e;
+						background-color: white;
+						width: 230px;
+						height: 30px;
+						border-radius: 5px;
+						margin-top: 5px;
+						visibility: visible;
+						position: relative;
+					}
+					.submit:hover {
+						background-color: #ff6b3e;
+					}
 			#sponsor {
 				width: 100%;
 				min-height: 200px;
@@ -88,4 +156,8 @@ span {
 			height: 100px;
 			background-color: #ff6b3e;
 			padding: 20px;
+			text-align: center;
 		}
+			#footer p {
+				margin-top: 40px;
+			}

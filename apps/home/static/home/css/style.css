@@ -112,16 +112,19 @@ span {
 					    background-color:#ff6b3e !important;
 					}
 					.submit {
-					font-size: 20px;
-					color: #27214e;
-					background-color: white;
-					width: 210px;
-					height: 38px;
-					padding: 5px;
-					border-radius: 5px;
-					margin-top: 5px;
-					visibility: visible;
-					position: relative;
+						font-size: 20px;
+						color: #27214e;
+						background-color: white;
+						width: 210px;
+						height: 38px;
+						padding: 5px;
+						border-radius: 5px;
+						margin-top: 5px;
+						visibility: visible;
+						position: relative;
+					}
+					.submit:hover {
+						background-color: #ff6b3e;
 					}
 			#mission {
 				width: 100%;
@@ -150,3 +153,6 @@ span {
 			padding: 20px;
 			text-align: center;
 		}
+			#footer p {
+				margin-top: 40px;
+			}

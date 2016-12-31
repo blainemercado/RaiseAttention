@@ -11,22 +11,80 @@
 <body>
 	<div id="container">
 		<div id="header">
-			<h1>RaiseAttention</h1>
-			<h2>...raise money</h2>
+			<h1><a id="title" href="/">RaiseAttention</a></h1>
+			<h2><a id="subtitle" href="/">...raise money</a></h2>
 		</div>
 		<div id="body">
 			<div id="thankyou">
 				<h2><span>Thank You for Your Support!</span></h2>
 				<p>And, thank you for helping <span>RaiseAttention</span>. If you'd like to help us raise more money please fill out the short survey below.</p>
+				<div id="graph">
+					<h2><span>Votes so far...</span></h2>
+					{% for npo in npos %}
+						<label>{{ npo.name }}</label><div class="bar" id="{{ npo.votes }}"></div>
+					{% endfor %}
+				</div>
+				<script type="text/javascript">
+					var npoBars = document.getElementsByClassName("bar");
+					var max = 0;
+					for(var i=0; i<npoBars.length; i++){
+						if(Number(npoBars[i].id) > max){
+							max = Number(npoBars[i].id);
+						}
+					}
+					if (max <= 10) {
+						for(var k=0; k<npoBars.length; k++){
+							npoBarsWidth = npoBars[k].id;
+							npoBarsWidthPercent = (npoBarsWidth/10) * 100;
+							npoBars[k].style["width"] = npoBarsWidthPercent + "%";
+						}
+					} else if (max <= 20) {
+						for(var k=0; k<npoBars.length; k++){
+							npoBarsWidth = npoBars[k].id;
+							npoBarsWidthPercent = (npoBarsWidth/20) * 100;
+							npoBars[k].style["width"] = npoBarsWidthPercent + "%";
+						}
+					} else if (max <= 50) {
+						for(var k=0; k<npoBars.length; k++){
+							npoBarsWidth = npoBars[k].id;
+							npoBarsWidthPercent = (npoBarsWidth/50) * 100;
+							npoBars[k].style["width"] = npoBarsWidthPercent + "%";
+						}
+					} else if (max <= 100) {
+						for(var k=0; k<npoBars.length; k++){
+							npoBarsWidth = npoBars[k].id;
+							npoBarsWidthPercent = (npoBarsWidth/100) * 100;
+							npoBars[k].style["width"] = npoBarsWidthPercent + "%";
+						}
+					} else if (max <= 250) {
+						for(var k=0; k<npoBars.length; k++){
+							npoBarsWidth = npoBars[k].id;
+							npoBarsWidthPercent = (npoBarsWidth/250) * 100;
+							npoBars[k].style["width"] = npoBarsWidthPercent + "%";
+						}
+					} else if (max <= 500) {
+						for(var k=0; k<npoBars.length; k++){
+							npoBarsWidth = npoBars[k].id;
+							npoBarsWidthPercent = (npoBarsWidth/500) * 100;
+							npoBars[k].style["width"] = npoBarsWidthPercent + "%";
+						}
+					} else if (max <= 1000) {
+						for(var k=0; k<npoBars.length; k++){
+							npoBarsWidth = npoBars[k].id;
+							npoBarsWidthPercent = (npoBarsWidth/1000) * 100;
+							npoBars[k].style["width"] = npoBarsWidthPercent + "%";
+						}
+					} 
+				</script>
 			</div>
 			<div id="supporterInfo">
 				<p>Totally optional, and completely anonymous. The more information you provide, the more money we can raise through ads.</p>
 				<div id="form">
 					<form action="supporter" method="post" id="supporterForm">
 						{% csrf_token %}
-						<input type="checkbox" name="returnSupporter" value="yes"><label>I have visited <span>RaiseAttention</span> before</label><br>
-						<label>Age:</label><select name="ageRange" form="supporterForm">
-							<option value="blank"></option>
+						<input id="btn" type="checkbox" name="returnSupporter" value="yes"><label id="checked" for="btn"></label><label>I have visited <span>RaiseAttention</span> before</label><br>
+						<select name="ageRange" form="supporterForm">
+							<option value="blank">Age</option>
 							<option value="12under">12 and Under</option>
 							<option value="13-19">13-19</option>
 							<option value="20-29">20-29</option>
@@ -36,21 +94,21 @@
 							<option value="60-69">60-69</option>
 							<option value="70+">70+</option>
 						</select><br>
-						<label>Gender:</label><select name="gender" form="supporterForm">
-							<option value="blank"></option>
+						<select name="gender" form="supporterForm">
+							<option value="blank">Gender</option>
 							<option value="female">Female</option>
 							<option value="male">Male</option>
 							<option value="other">Other</option>
 						</select><br>
-						<label>Relationship Status:</label><select name="relationship" form="supporterForm">
-							<option value="blank"></option>
+						<select name="relationship" form="supporterForm">
+							<option value="blank">Relationship Status</option>
 							<option value="single">Single</option>
 							<option value="inARelationship">In a Relationship</option>
 							<option value="engaged">Engaged</option>
 							<option value="married">Married</option>
 						</select><br>
-						<label>State:</label><select name="state" form="supporterForm">
-							<option value="blank"></option>
+						<select name="state" form="supporterForm">
+							<option value="blank">State</option>
 							<option value="AL">AL</option>
 							<option value="AK">AK</option>
 							<option value="AZ">AZ</option>
@@ -105,8 +163,8 @@
 							<option value="WI">WI</option>
 							<option value="WY">WY</option>
 						</select><br>
-						<label>Country:</label><select name="country" form="supporterForm">
-							<option value="blank"></option>
+						<select name="country" form="supporterForm">
+							<option value="blank">Country</option>
 							<option value="usa">USA</option>
 							<option value="canada">Canada</option>
 							<option value="mexico">Mexico</option>
@@ -115,19 +173,21 @@
 							<option value="scotland">Scotland</option>
 							<option value="other">Other</option>
 						</select><br>
-						<input type="submit" name="submit" value="Submit Info Anonymously">
+						<input class="submit" type="submit" name="submit" value="Submit Info Anonymously">
 					</form>
 				</div>
 			</div>
 			<div id="sponsor">
-				
+				<h2><span>Our Sponsors</span></h2>
+				<p>If you'd like to sponsor <span>RaiseAttention</span> please contact us at info@RaiseAttention.com</p>
 			</div>
 			<div id="ads">
-			
+				<h2><span>Advertise Here!</span></h2>
+				<p>If you'd like to advertise on <span>RaiseAttention.com</span> please contact us at info@RaiseAttention.com</p>
 			</div>
 		</div>
 		<div id="footer">
-			
+			<p>Copyright © <span>RaiseAttention</span> 2016</p>
 		</div>
 	</div>
 </body>
