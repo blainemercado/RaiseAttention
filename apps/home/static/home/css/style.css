@@ -125,6 +125,15 @@ span {
 					.submit:hover {
 						background-color: #ff6b3e;
 					}
+			#moneyRaised {
+				background-color: #ff6b3e;
+				border-radius: 10px;
+				max-width: 350px;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 20px;
+				padding: 5px;
+			}
 			#mission {
 				width: 100%;
 				min-height: 200px;
