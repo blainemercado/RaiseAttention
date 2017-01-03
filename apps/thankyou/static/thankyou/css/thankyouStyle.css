@@ -65,7 +65,7 @@ span {
 				padding: 20px;
 			}
 				#graph {
-					width: 350px;
+					max-width: 350px;
 					min-height: 200px;
 					background-color: #f7e089;
 					margin-left: auto;
@@ -93,7 +93,7 @@ span {
 						margin-bottom: 15px;
 					}
 				#form {
-					width: 330px;
+					max-width: 330px;
 					margin-left: auto;
 					margin-right: auto;
 				}
@@ -106,7 +106,7 @@ span {
 					#form select {
 						margin-top: 3px;
 						margin-bottom: 3px;
-						width: 225px;
+						width: 200px;
 					}
 					#checked {
 					    margin-bottom: 4px;
@@ -124,10 +124,10 @@ span {
 					    background-color:#ff6b3e !important;
 					}
 					.submit {
-						font-size: 20px;
+						font-size: 17px;
 						color: #27214e;
 						background-color: white;
-						width: 230px;
+						width: 200px;
 						height: 30px;
 						border-radius: 5px;
 						margin-top: 5px;
