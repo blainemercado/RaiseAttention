@@ -49,6 +49,9 @@
 								<p>UNICEF works in 190 countries and territories to protect the rights of every child. UNICEF has spent 70 years working to improve the lives of children and their families. Defending children's rights throughout their lives requires a global presence, aiming to produce results and understand their effects. </p>
 							</div>
 						<input class="submit" type="submit" name="submit" value="Support Your Cause">
+						{% for err in error %}
+							<div id="error">{{ err }}</div>
+						{% endfor %}
 					</form>
 				</div>
 				<script type="text/javascript">

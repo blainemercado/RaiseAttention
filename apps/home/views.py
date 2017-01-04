@@ -10,8 +10,20 @@ def index(request):
 def support(request):
 	if request.method != 'POST':
 		return redirect('/')
-	npoName = request.POST['npo']
-	created = Npo.npoManager.create(npoName)
+	try:
+		npoName = request.POST['npo']
+	except:
+		context = {
+			"error": ["Error recording your vote. Please try voting again"]
+		}
+		return render(request, 'home/index.html', context)
+	try:
+		created = Npo.npoManager.create(npoName)
+	except:
+		context = {
+			"error": ["Error recording your vote. Please try voting again"]
+		}
+		return render(request, 'home/index.html', context)
 	if created == True:
 		return redirect(reverse('thankyou:thankyou'))
 	else:
