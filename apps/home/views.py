@@ -17,13 +17,7 @@ def support(request):
 			"error": ["Error recording your vote. Please try voting again"]
 		}
 		return render(request, 'home/index.html', context)
-	try:
-		created = Npo.npoManager.create(npoName)
-	except:
-		context = {
-			"error": ["Error recording your vote. Please try voting again"]
-		}
-		return render(request, 'home/index.html', context)
+	created = Npo.npoManager.create(npoName)
 	if created == True:
 		return redirect(reverse('thankyou:thankyou'))
 	else:
