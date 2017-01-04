@@ -18,64 +18,13 @@
 			<div id="thankyou">
 				<h2><span>Thank You for Your Support!</span></h2>
 				<p>And, thank you for helping <span>RaiseAttention</span>. If you'd like to help us raise more money please fill out the short survey below.</p>
+				<!-- Vote Graph -->
 				<div id="graph">
 					<h2><span>Votes so far...</span></h2>
 					{% for npo in npos %}
 						<label>{{ npo.name }}</label><div class="bar" id="{{ npo.votes }}"></div>
 					{% endfor %}
 				</div>
-				<script type="text/javascript">
-					var npoBars = document.getElementsByClassName("bar");
-					var max = 0;
-					for(var i=0; i<npoBars.length; i++){
-						if(Number(npoBars[i].id) > max){
-							max = Number(npoBars[i].id);
-						}
-					}
-					if (max <= 10) {
-						for(var k=0; k<npoBars.length; k++){
-							npoBarsWidth = npoBars[k].id;
-							npoBarsWidthPercent = (npoBarsWidth/10) * 100;
-							npoBars[k].style["width"] = npoBarsWidthPercent + "%";
-						}
-					} else if (max <= 20) {
-						for(var k=0; k<npoBars.length; k++){
-							npoBarsWidth = npoBars[k].id;
-							npoBarsWidthPercent = (npoBarsWidth/20) * 100;
-							npoBars[k].style["width"] = npoBarsWidthPercent + "%";
-						}
-					} else if (max <= 50) {
-						for(var k=0; k<npoBars.length; k++){
-							npoBarsWidth = npoBars[k].id;
-							npoBarsWidthPercent = (npoBarsWidth/50) * 100;
-							npoBars[k].style["width"] = npoBarsWidthPercent + "%";
-						}
-					} else if (max <= 100) {
-						for(var k=0; k<npoBars.length; k++){
-							npoBarsWidth = npoBars[k].id;
-							npoBarsWidthPercent = (npoBarsWidth/100) * 100;
-							npoBars[k].style["width"] = npoBarsWidthPercent + "%";
-						}
-					} else if (max <= 250) {
-						for(var k=0; k<npoBars.length; k++){
-							npoBarsWidth = npoBars[k].id;
-							npoBarsWidthPercent = (npoBarsWidth/250) * 100;
-							npoBars[k].style["width"] = npoBarsWidthPercent + "%";
-						}
-					} else if (max <= 500) {
-						for(var k=0; k<npoBars.length; k++){
-							npoBarsWidth = npoBars[k].id;
-							npoBarsWidthPercent = (npoBarsWidth/500) * 100;
-							npoBars[k].style["width"] = npoBarsWidthPercent + "%";
-						}
-					} else if (max <= 1000) {
-						for(var k=0; k<npoBars.length; k++){
-							npoBarsWidth = npoBars[k].id;
-							npoBarsWidthPercent = (npoBarsWidth/1000) * 100;
-							npoBars[k].style["width"] = npoBarsWidthPercent + "%";
-						}
-					} 
-				</script>
 			</div>
 			<div id="supporterInfo">
 				<p>Totally optional, and completely anonymous. The more information you provide, the more money we can raise through ads.</p>
@@ -190,5 +139,59 @@
 			<p>Copyright © <span>RaiseAttention</span> 2016</p>
 		</div>
 	</div>
+
+<!-- Graph of Votes that is based on a percentage so that it scales to 1000 votes. Adjusts styling of individual elements -->
+	<script type="text/javascript">
+		var npoBars = document.getElementsByClassName("bar");
+		var max = 0;
+		for(var i=0; i<npoBars.length; i++){
+			if(Number(npoBars[i].id) > max){
+				max = Number(npoBars[i].id);
+			}
+		}
+		if (max <= 10) {
+			for(var k=0; k<npoBars.length; k++){
+				npoBarsWidth = npoBars[k].id;
+				npoBarsWidthPercent = (npoBarsWidth/10) * 100;
+				npoBars[k].style["width"] = npoBarsWidthPercent + "%";
+			}
+		} else if (max <= 20) {
+			for(var k=0; k<npoBars.length; k++){
+				npoBarsWidth = npoBars[k].id;
+				npoBarsWidthPercent = (npoBarsWidth/20) * 100;
+				npoBars[k].style["width"] = npoBarsWidthPercent + "%";
+			}
+		} else if (max <= 50) {
+			for(var k=0; k<npoBars.length; k++){
+				npoBarsWidth = npoBars[k].id;
+				npoBarsWidthPercent = (npoBarsWidth/50) * 100;
+				npoBars[k].style["width"] = npoBarsWidthPercent + "%";
+			}
+		} else if (max <= 100) {
+			for(var k=0; k<npoBars.length; k++){
+				npoBarsWidth = npoBars[k].id;
+				npoBarsWidthPercent = (npoBarsWidth/100) * 100;
+				npoBars[k].style["width"] = npoBarsWidthPercent + "%";
+			}
+		} else if (max <= 250) {
+			for(var k=0; k<npoBars.length; k++){
+				npoBarsWidth = npoBars[k].id;
+				npoBarsWidthPercent = (npoBarsWidth/250) * 100;
+				npoBars[k].style["width"] = npoBarsWidthPercent + "%";
+			}
+		} else if (max <= 500) {
+			for(var k=0; k<npoBars.length; k++){
+				npoBarsWidth = npoBars[k].id;
+				npoBarsWidthPercent = (npoBarsWidth/500) * 100;
+				npoBars[k].style["width"] = npoBarsWidthPercent + "%";
+			}
+		} else if (max <= 1000) {
+			for(var k=0; k<npoBars.length; k++){
+				npoBarsWidth = npoBars[k].id;
+				npoBarsWidthPercent = (npoBarsWidth/1000) * 100;
+				npoBars[k].style["width"] = npoBarsWidthPercent + "%";
+			}
+		} 
+	</script>
 </body>
 </html>
