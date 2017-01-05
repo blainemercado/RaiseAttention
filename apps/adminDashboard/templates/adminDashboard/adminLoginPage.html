@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>RaiseAttention Admin Login Page</title>
+</head>
+<body>
+	<form action="/adminDashboard/login" method="post">
+		{% csrf_token %}
+		<input type="password" name="password">
+		<input type="submit" name="login" value="Login">
+	</form>
+</body>
+</html>
