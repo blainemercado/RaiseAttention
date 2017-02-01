@@ -6,7 +6,9 @@ from django.core.urlresolvers import reverse
 # Create your views here.
 def thankyou(request):
 	npoArray = Npo.npoManager.voteCount()
-	print(npoArray);
+	# print(npoArray);
+	for npo in npoArray:
+		print("NPO vote counts: ", npo.votes)
 	context = {
 		"npos": npoArray
 	}

@@ -4,7 +4,8 @@ from django.core.urlresolvers import reverse
 
 # Create your views here.
 def index(request):
-	totalVisitors = SiteVisitors.visitorsManager.addTotalVisitors('totalVisitors')
+	totalVisitors = SiteVisitors.visitorsManager.addVisitors('totalVisitors')
+	monthlyVisitors = SiteVisitors.visitorsManager.addVisitors('monthlyVisitors')
 	return render(request, 'home/index.html')
 
 def support(request):
@@ -22,4 +23,5 @@ def support(request):
 		return redirect(reverse('thankyou:thankyou'))
 	else:
 		count = Npo.npoManager.addVote(npoName)
+		print("Count after voting: ", count)
 		return redirect(reverse('thankyou:thankyou'))

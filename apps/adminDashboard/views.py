@@ -42,3 +42,11 @@ def adminDash(request):
 def switchActive(request, id):
 	Npo.npoManager.active(id)
 	return redirect('/adminDashboard/adminDash')
+
+def resetVote(request, id):
+	Npo.npoManager.resetVote(id)
+	return redirect('/adminDashboard/adminDash')
+
+def resetVisitorCount(request, id):
+	SiteVisitors.visitorsManager.resetVisitorCount(id)
+	return redirect('/adminDashboard/adminDash')

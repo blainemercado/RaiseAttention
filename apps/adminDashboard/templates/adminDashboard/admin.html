@@ -18,6 +18,7 @@
 				<th>NPO</th>
 				<th>Votes</th>
 				<th>Active?</th>
+				<th>Reset Votes</th>
 			</tr>
 		</thead>
 		{% for npo in npos %}
@@ -25,6 +26,7 @@
 			<td>{{npo.name}}</td>
 			<td>{{npo.votes}}</td>
 			<td>{{npo.active}} - <a href="/adminDashboard/npo/switchActive/{{npo.id}}">Switch</a></td>
+			<td><a href="/adminDashboard/npo/resetVote/{{npo.id}}">Reset Vote</a></td>
 		</tr>
 		{% endfor %}
 	</table>
@@ -34,12 +36,14 @@
 			<tr>
 				<th>Visitor Type</th>
 				<th>Visits</th>
+				<th>Reset Count</th>
 			</tr>
 		</thead>
 		{% for visitor in visitors %}
 		<tr>
 			<td>{{visitor.name}}</td>
 			<td>{{visitor.visitorCount}}</td>
+			<td><a href="/adminDashboard/visitors/resetCount/{{visitor.id}}">Reset Count</a></td>
 		</tr>
 		{% endfor %}
 	</table>

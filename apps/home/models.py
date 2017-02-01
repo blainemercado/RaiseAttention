@@ -16,6 +16,12 @@ class NpoManager(models.Manager):
 		npoObject.save()
 		count = npoObject.votes
 		return count
+	def resetVote(self, id):
+		npoObject = Npo.objects.get(id=id)
+		npoObject.votes = 0
+		npoObject.save()
+		count = npoObject.votes
+		return count
 	def voteCount(self):
 		npoArray = Npo.objects.all()
 		return npoArray
@@ -29,7 +35,7 @@ class NpoManager(models.Manager):
 		return True
 
 class VisitorsManager(models.Manager):
-	def addTotalVisitors(self, name):
+	def addVisitors(self, name):
 		try:
 			visitorsObject = SiteVisitors.objects.get(name=name)
 		except:
@@ -38,6 +44,11 @@ class VisitorsManager(models.Manager):
 		visitorsObject.visitorCount += 1
 		visitorsObject.save()
 		return visitorsObject.visitorCount
+	def resetVisitorCount(self, id):
+		visitorsObject = SiteVisitors.objects.get(id=id)
+		visitorsObject.visitorCount = 0
+		visitorsObject.save()
+		return True
 	def getVisitors(self):
 		visitorsArray = SiteVisitors.objects.all()
 		return visitorsArray
