@@ -19,6 +19,14 @@ class NpoManager(models.Manager):
 	def voteCount(self):
 		npoArray = Npo.objects.all()
 		return npoArray
+	def active(self, id):
+		npoObject = Npo.objects.get(id=id)
+		if npoObject.active:
+			npoObject.active = False
+		else:
+			npoObject.active = True
+		npoObject.save()
+		return True
 
 class VisitorsManager(models.Manager):
 	def addTotalVisitors(self, name):
@@ -38,6 +46,7 @@ class VisitorsManager(models.Manager):
 class Npo(models.Model):
 	name = models.CharField(max_length=300)
 	votes = models.PositiveIntegerField()
+	active = models.BooleanField(default=True)
 	created_at = models.DateTimeField(auto_now_add=True)
 	updated_at = models.DateTimeField(auto_now=True)
 	npoManager = NpoManager()

@@ -22,31 +22,31 @@
 				<div id="form">
 					<form action="/support" method="post">
 						{% csrf_token %}
-						<input id="btn1" type="radio" name="npo" value="Cancer Research Institute"><label id="checked1" for="btn1"></label><label class="npoLabel">Cancer Research Institute</label><br>
+						<input id="btn1" type="radio" name="npo" value="ACLU"><label id="checked1" for="btn1"></label><label class="npoLabel">ACLU</label><br>
 							<div class="npoInfo">
-								<a href="http://www.cancerresearch.org/">CancerResearch.org</a>
-								<p>The Cancer Research Institute (CRI) is the world's leading nonprofit organization dedicated exclusively to harnessing the immune system's power to conquer all cancers.</p>
+								<a href="https://www.aclu.org/">ACLU.org</a>
+								<p>For almost 100 years, the ACLU has worked to defend and preserve the individual rights and liberties guaranteed by the Constitution and laws of the United States.</p>
 							</div>
-						<input id="btn2" type="radio" name="npo" value="Soldiers' Angels"><label id="checked2" for="btn2"></label><label class="npoLabel">Soldiers' Angels</label><br>
+						<input id="btn2" type="radio" name="npo" value="Planned Parenthood"><label id="checked2" for="btn2"></label><label class="npoLabel">Planned Parenthood</label><br>
 							<div class="npoInfo">
-								<a href="http://soldiersangels.org/">SoldiersAngels.org</a>
-								<p>May No Soldier Go Unloved: Soldiers' Angels provides aid and comfort to the men and women of the United States Army, Marines, Navy, Air Force, Coast Guard, their families, and a growing veteran population.</p>
+								<a href="https://www.plannedparenthood.org">PlannedParenthood.org</a>
+								<p>Planned Parenthood is a trusted health care provider, an informed educator, a passionate advocate, and a global partner helping similar organizations around the world. Planned Parenthood delivers vital reproductive health care, sex education, and information to millions of women, men, and young people worldwide.</p>
 							</div>
-						<input id="btn3" type="radio" name="npo" value="The Trevor Project"><label id="checked3" for="btn3"></label><label class="npoLabel">The Trevor Project</label><br>
+						<input id="btn3" type="radio" name="npo" value="The Trevor Project.02.17"><label id="checked3" for="btn3"></label><label class="npoLabel">The Trevor Project</label><br>
 							<div class="npoInfo">
 								<a href="http://www.thetrevorproject.org/">TheTrevorProject.org</a>
 								<p>Founded in 1998 by the creators of the Academy Award®-winning short film TREVOR, The Trevor Project is the leading national organization providing crisis intervention and suicide prevention services to lesbian, gay, bisexual, transgender and questioning (LGBTQ) young people ages 13-24.</p>
 							</div>
-						<input id="btn4" type="radio" name="npo" value="Generosity.org">
-						<label id="checked4" for="btn4"></label><label class="npoLabel">Generosity.org</label><br>
+						<input id="btn4" type="radio" name="npo" value="USA for UNHCR">
+						<label id="checked4" for="btn4"></label><label class="npoLabel">USA for UNHCR</label><br>
 							<div class="npoInfo">
-								<a href="http://generosity.org/">Generosity.org</a>
-								<p>Give The Gift of Water: Access to clean water gives us the opportunity to live a healthy and productive life. The time once spent surviving can now be spent dreaming, growing, and thriving because water is life.</p>
+								<a href="http://www.unrefugees.org/">UNRefugees.org</a>
+								<p>USA for UNHCR helps and protects refugees and people displaced by violence, conflict and persecution. Supporting UNHCR – the UN Refugee Agency – and its partners, we provide lifesaving essentials including shelter, water, food, safety and protection. Around the world, we help refugees survive, recover and build a better future.</p>
 							</div>
-						<input id="btn5" type="radio" name="npo" value="UNICEF"><label id="checked5" for="btn5"></label><label class="npoLabel">UNICEF</label><br>
+						<input id="btn5" type="radio" name="npo" value="Doctors Without Borders"><label id="checked5" for="btn5"></label><label class="npoLabel">Doctors Without Borders</label><br>
 							<div class="npoInfo">
-								<a href="https://www.unicef.org/">UNICEF.org</a>
-								<p>UNICEF works in 190 countries and territories to protect the rights of every child. UNICEF has spent 70 years working to improve the lives of children and their families. Defending children's rights throughout their lives requires a global presence, aiming to produce results and understand their effects. </p>
+								<a href="http://www.doctorswithoutborders.org/">DoctorsWithoutBorders.org</a>
+								<p>We are Doctors Without Borders/Médecins Sans Frontières (MSF). We help people worldwide where the need is greatest, delivering emergency medical aid to people affected by conflict, epidemics, disasters, or exclusion from health care.</p>
 							</div>
 						<input class="submit" type="submit" name="submit" value="Support Your Cause">
 						{% for err in error %}

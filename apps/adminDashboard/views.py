@@ -38,3 +38,7 @@ def adminDash(request):
 			"visitors": visitorsArray
 		}
 		return render(request, 'adminDashboard/admin.html', context)
+
+def switchActive(request, id):
+	Npo.npoManager.active(id)
+	return redirect('/adminDashboard/adminDash')

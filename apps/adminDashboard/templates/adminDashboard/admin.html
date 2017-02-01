@@ -8,19 +8,23 @@
 </head>
 <body>
 	<h2>Hello Admin</h2> 
-	<a href="/adminDashboard/logout">Logout</a>
+	<a href="/adminDashboard/logout">Logout</a> |
+	<a href="/">Home Page</a> |
+	<a href="/thankyou/thankyou">Thank You Page</a>
 <!-- Table for NPOs and their vote count -->
 	<table>
 		<thead>
 			<tr>
 				<th>NPO</th>
 				<th>Votes</th>
+				<th>Active?</th>
 			</tr>
 		</thead>
 		{% for npo in npos %}
 		<tr>
 			<td>{{npo.name}}</td>
 			<td>{{npo.votes}}</td>
+			<td>{{npo.active}} - <a href="/adminDashboard/npo/switchActive/{{npo.id}}">Switch</a></td>
 		</tr>
 		{% endfor %}
 	</table>

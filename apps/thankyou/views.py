@@ -20,4 +20,3 @@ def addSupporter(request):
 	print('*-*-*-*-*-*-*-')
 	print(createdSupporter)
 	return redirect(reverse('thankyou:thankyou'))
-

@@ -22,7 +22,9 @@
 				<div id="graph">
 					<h2><span>Votes so far...</span></h2>
 					{% for npo in npos %}
+						{% if npo.active == True %}
 						<label>{{ npo.name }}</label><div class="bar" id="{{ npo.votes }}"></div>
+						{% endif %}
 					{% endfor %}
 				</div>
 			</div>
