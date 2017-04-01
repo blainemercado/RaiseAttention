@@ -29,31 +29,31 @@
 				<div id="form">
 					<form action="/support" method="post">
 						{% csrf_token %}
-						<input id="btn1" type="radio" name="npo" value="MercyCorps"><label id="checked1" for="btn1"></label><label class="npoLabel">Mercy Corps</label><br>
+						<input id="btn1" type="radio" name="npo" value="Moyer Foundation"><label id="checked1" for="btn1"></label><label class="npoLabel">The Moyer Foundation</label><br>
 							<div class="npoInfo">
-								<a href="https://www.mercycorps.org/">MercyCorps.org</a>
-								<p>Mercy Corps understands that communities are the best agents of their own change and local markets are the best engines of long-term recovery. For the refugee who dreams of rebuilding her country, for the mother who wants a healthy future for her children — for millions of people, in more than 40 countries, filled with the power of possibility — Mercy Corps connects people to the resources they need to build better, stronger lives.</p>
+								<a href="https://moyerfoundation.org/">MoyerFoundation.org</a>
+								<p>The mission of The Moyer Foundation is to provide comfort, hope and healing to children and families affected by grief and addiction. Our innovative resources and programs address the critical needs of children experiencing powerful, overwhelming and often confusing emotions associated with the death of someone close to them or substance abuse in their family. No child should have to face these struggles alone, and our unique programs bring kids together to ease their pain and provide the tools to help restore hope.</p>
 							</div>
-						<input id="btn2" type="radio" name="npo" value="Volunteer Services"><label id="checked2" for="btn2"></label><label class="npoLabel">Volunteer Services CCSWW</label><br>
+						<input id="btn2" type="radio" name="npo" value="Bread Of Life"><label id="checked2" for="btn2"></label><label class="npoLabel">Bread of Life</label><br>
 							<div class="npoInfo">
-								<a href="http://www.ccsww.org/site/PageServer?pagename=volunteerchores">CCSWW.org</a>
-								<p>Volunteer Services (formerly Volunteer Chore Services) began in 1981 in response to cuts in services for elders by the state legislature. The program currently works with thousands of elders and adults with disabilities statewide. VS is committed to helping elders and adults with disabilities remain independent in their own homes through a network of caring community members.</p>
+								<a href="http://www.breadoflifemission.org/">BreadOfLifeMission.org</a>
+								<p>Our goal is to help people overcome the cycle of homelessness through a Christ-centered recovery model with God's help. Founded in 1939 towards the end of The Great Depression, Mavel Sherman started Bread of Life in a building on the corner of Washington and Occidental Street in downtown Seattle. The Bread of Life Mission exists to overcome the cycle of homelessness in men’s and women’s lives through a Christ-centered recovery model with God’s help.</p>
 							</div>
-						<input id="btn3" type="radio" name="npo" value="PAWS"><label id="checked3" for="btn3"></label><label class="npoLabel">PAWS</label><br>
+						<input id="btn3" type="radio" name="npo" value="Seattle Childrens Hospital"><label id="checked3" for="btn3"></label><label class="npoLabel">Seattle Children's Hospital</label><br>
 							<div class="npoInfo">
-								<a href="http://www.paws.org/">PAWS.org</a>
-								<p>PAWS is people helping animals. Since 1967, PAWS has united more than 130,000 companion animals with loving families, cared for 115,000 injured and orphaned wild animals, and made the world a better place for countless others through advocacy and education.</p>
+								<a href="http://www.seattlechildrens.org/">SeattleChildrens.org</a>
+								<p>We are united by a compelling mission: We provide hope, care and cures to help every child live the healthiest and most fulfilling life possible. Together, we deliver superior patient care, advance new discoveries and treatments through pediatric research and serve as the pediatric and adolescent academic medical center for Washington, Alaska, Montana and Idaho – the largest region of any children’s hospital in the country.</p>
 							</div>
-						<input id="btn4" type="radio" name="npo" value="USA for UNHCR">
-						<label id="checked4" for="btn4"></label><label class="npoLabel">YWCA</label><br>
+						<input id="btn4" type="radio" name="npo" value="Seattle Cancer Care Alliance">
+						<label id="checked4" for="btn4"></label><label class="npoLabel">Seattle Cancer Care Alliance</label><br>
 							<div class="npoInfo">
-								<a href="http://www.ywcaworks.org/">YWCA.org</a>
-								<p>YWCA is on a mission to eliminate racism, empower women, stand up for social justice, help families, and strengthen communities. YWCA works where we’re needed most to create real change every day through services, advocacy and programs that: Build stable homes and promote economic advancement - Improve health and end violence against women - Increase racial equity and social justice for all people.</p>
+								<a href="https://www.seattlecca.org/">SeattleCCA.org</a>
+								<p>Seattle Cancer Care Alliance brings together the leading research teams and cancer specialists of Fred Hutch, Seattle Children's, and UW Medicine. When you seek treatment at SCCA, you access an extraordinary group whose sole mission is the pursuit of better, longer, richer lives for our patients.</p>
 							</div>
-						<input id="btn5" type="radio" name="npo" value="Doctors Without Borders"><label id="checked5" for="btn5"></label><label class="npoLabel">Doctors Without Borders</label><br>
+						<input id="btn5" type="radio" name="npo" value="Habitat for Humanity"><label id="checked5" for="btn5"></label><label class="npoLabel">Habitat for Humanity</label><br>
 							<div class="npoInfo">
-								<a href="http://www.doctorswithoutborders.org/">DoctorsWithoutBorders.org</a>
-								<p>We are Doctors Without Borders/Médecins Sans Frontières (MSF). We help people worldwide where the need is greatest, delivering emergency medical aid to people affected by conflict, epidemics, disasters, or exclusion from health care.</p>
+								<a href="https://www.habitatskc.org/">HabitatForHumanity.org</a>
+								<p>The vision of all Habitat for Humanity organizations around the world is “a world where everyone has a decent place to live.” Habitat for Humanity’s role in realizing that vision is expressed in its mission: “Seeking to put God’s love into action, Habitat for Humanity brings people together to build homes, communities, and hope.”</p>
 							</div>
 						<input class="submit" type="submit" name="submit" value="Support Your Cause">
 						{% for err in error %}
